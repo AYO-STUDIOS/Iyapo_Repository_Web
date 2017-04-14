@@ -1,0 +1,4 @@
+1. Please push any exsisting assets into the _images folder or _fonts folder.
+2. Everytime before you start developing please make sure to pull updates from the master brench. 
+3. Push any new updates to a new brench. All the brenches will be reviewd and then merged with the master brench. Plese, DO NOT commit anything to master brench without a review first.
+4. If you need a quick course on Git pull/push/create a new brench, please watch https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html This guide will help set up Git on your computer if needed. Part 10 explains brenches in great details.
