@@ -1,0 +1,100 @@
+
+/*Title and Headers*/
+@font-face {
+    font-family: 'Alien';
+    src: url('../_fonts/Alien/alienleagueiileft-webfont.woff2') format('woff2'),
+         url('../fonts/Alien/alienleagueiileft-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div{
+	display: block;
+}
+
+body {
+	background: #242B65;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+}
+
+#content-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 800px;
+	height: 600px;
+}
+
+#logo img{
+	width: 100%;
+	height: auto;
+	margin-top: 70px;
+}
+
+#title {
+	color: #F53E67;
+	text-align: center;
+	width: 100%;
+}
+
+#title h2{
+	font-family: 'Alien', sans-serif; 
+	font-size: 6em;
+	text-transform: lowercase;
+	margin-top: 60px;
+	margin-bottom: 0px;
+	font-weight: 100;	
+}
+
+#status {
+	text-align: center;
+
+}
+
+#status span {
+	width: 10px;
+	animation: blink .7s infinite;
+
+}
+
+#status p{
+	color: #F4F4CC;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.7em;
+	text-transform: lowercase;
+	letter-spacing: 3px;
+	width: 300px;
+	margin: auto;
+	margin-top: 35px;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: type 4s steps(14, end);
+}
+
+@keyframes blink {
+	0%{
+		opacity: .0
+	}
+}
+
+@keyframes type {
+	0% {
+		width: 0;
+	}
+	20% {
+		width: 0;
+	}
+	80% {
+		width: 14ch;
+	}
+	100% {
+		width: 14ch;
+	}
+}
+
