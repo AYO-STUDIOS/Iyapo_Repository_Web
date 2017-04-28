@@ -1,0 +1,276 @@
+@font-face {
+	font-family: 'alien_league_ii_leftalicIt';
+	src: url('alienleagueiileft-webfont.woff2') format('woff2'),
+			 url('alienleagueiileft-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background: 	#345d7e;
+	height:100%;
+	width:100%;
+}
+
+#navigationBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #345d7e;
+	height:auto;
+	width:100%;
+	border:#FFF;
+}
+
+#myAbout {
+/*padding: 10px;*/
+margin-top: 0px;
+margin-left:30px;
+}
+
+#myContact {
+/*padding: 10px;*/
+	margin-left:30px;
+}
+
+.modal-body {
+	overflow-y: auto;
+}
+
+#myModal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	box-shadow: 0px 4px 20px;
+}
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 90%; /* Could be more or less, depending on screen size */
+	height:100%;
+}
+#myModalTwo {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	box-shadow: 0px 4px 20px;
+}
+
+input[type=text], select {
+	position:center;
+	width: 90%;
+	padding: 12px 40px;
+	margin: 10px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=message] {
+	position:center;
+	width: 90%;
+	height: 150px;
+	padding: 12px 40px;
+	margin: 10px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	position:center;
+	width: 50%;
+	background-color: #942F4C;
+	color: white;
+	padding: 14px 40px;
+	margin: 10px 0;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #E5BBC7;
+}
+
+/* The Close Button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	/*padding: 35px 32px;*/
+	padding-left: 100px;
+	text-align: center;
+	text-decoration: none;
+	display:flex;
+	font-size: 16px;
+}
+
+p {
+	padding:10px;
+	text-align: center;
+	font: 20px;
+}
+
+h1 {
+	font-size: 30px;
+	color: #ccc;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing:2px;
+}
+
+h2 {
+	font-size: 17px;
+	color: #ccc;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing:2px;
+	margin-left:80px;
+	margin-right:80px;
+	margin-bottom: 40px;
+
+}
+
+h3 {
+	font-size: 20px;
+	color: #ccc;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing:2px;
+	margin-left:80px;
+	margin-right:80px;
+}
+hr{
+	margin-left:80px;
+	margin-right:80px;
+}
+
+#box {
+	height:400px;
+	width:800px;
+	background:#C0C0C0;
+	margin:200px;
+}
+
+#main {
+	height:400px;
+	width:800px;
+	background:#C0C0C0;
+	margin:200px;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  height: 50px;
+  width: auto;
+}
+
+
+.wrap img {
+  margin: 0px 0 0 -40px;
+  line-height: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+}
+
+.bounce {
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+}
+
+.bounce {
+  animation: bounce 3.6s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+  5.55556% {
+    transform: translateY(0)
+  }
+  11.11111% {
+    transform: translateY(0)
+  }
+  22.22222% {
+    transform: translateY(-15px)
+  }
+  27.77778% {
+    transform: translateY(0)
+  }
+  33.33333% {
+    transform: translateY(-15px)
+  }
+  44.44444% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.footer {
+  background-color:#fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.pic {
+	 width:320px;
+	 height:320px;
+	 padding-left: 40px;
+}
+
+
+
+
+
+
