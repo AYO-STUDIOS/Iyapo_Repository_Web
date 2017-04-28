@@ -24,24 +24,30 @@ btn2.onclick = function() {
 span.onclick = function() {
     modal.style.display = "none";
 }
+span.onclick = function() {
+    modaltwo.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+        if (event.target == modaltwo) {
+        modaltwo.style.display = "none";
+    }
 }
 
-// function register(){
-//     // caution: drop the "new Array" part or it won't work!
-//     var ids = ['name','lname','email','password','cpassword'];
-//     var printThis = "";
-//     for(var i = 0; i < ids.length; i++){
-//         printThis += "<br>"+ids[i];
-//     }
-//     return printThis; // <-- to be printed to the div
-// }
-// document.getElementById('ids').innerHTML = register();
+function register(){
+    // caution: drop the "new Array" part or it won't work!
+    var ids = ['name','lname','email','password','cpassword'];
+    var printThis = "";
+    for(var i = 0; i < ids.length; i++){
+        printThis += "<br>"+ids[i];
+    }
+    return printThis; // <-- to be printed to the div
+}
+document.getElementById('ids').innerHTML = register();
 
 
 
