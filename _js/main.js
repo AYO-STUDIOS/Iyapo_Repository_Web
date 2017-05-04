@@ -38,16 +38,20 @@ window.onclick = function(event) {
     }
 }
 
-function register(){
-    // caution: drop the "new Array" part or it won't work!
-    var ids = ['name','lname','email','password','cpassword'];
-    var printThis = "";
-    for(var i = 0; i < ids.length; i++){
-        printThis += "<br>"+ids[i];
-    }
-    return printThis; // <-- to be printed to the div
+var objects = [];
+
+// creating 6 arrays in our orig. array
+for(var i = 0; i < 6; i++){
+   objects[i] = [Math.random(), Math.random()] 
 }
-document.getElementById('ids').innerHTML = register();
+
+for(i in objects){
+  for(n in objects[i]){
+  }
+}
+
+
+document.getElementById("foot").innerHTML;
 
 
 
