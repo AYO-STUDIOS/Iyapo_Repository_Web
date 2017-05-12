@@ -1,66 +1,111 @@
+/*Background: #426084;*/
+/*pink: #ff3f5e;*/
+/*lightblue: #8EA4B9;*/
+/*verylightblue: #C6CFDA;*/
+
+
 @import url(http://fonts.googleapis.com/css?family=Lato:700);
-* { 
-  box-sizing: border-box
+
+@font-face {
+    font-family: 'Alien';
+    src: url('../_fonts/Alien/alienleagueiileft-webfont.woff2') format('woff2'),
+         url('../fonts/Alien/alienleagueiileft-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 html, body {
 	font-family: 'Open Sans Condensed', sans-serif;
-	background: 	#345d7e;
-	height:auto;
-	width:100%;
-	/*margin-left:20px;*/
-	/*margin-right:40px;*/
+	background: #426084;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
+div, footer, body {
+	display: block;
+}
 
-#navigationBar {
+.main-header { 
+	margin-top: 30px;
+	margin-bottom: 30px; 
+}
+
+.header-container {
+	height: 2em;
 	position: absolute;
-	top: 0;
-	left: 0;
-	/*background: #CCC;*/
-	padding-bottom: 100px;
-	height:80px;
-	width:100%;
-	border:#FFF;
 }
 
-#myAbout {
-/*padding: 10px;*/
-margin-top: 0px;
-margin-left:30px;
+.main-header h1 {
+	position: absolute;
+	font-size: 2em;
+	color: #ff3f5e;;
+	text-transform: lowercase;
+	letter-spacing: 2px;
+	width: 17%;
+	left: calc(50% - 8%);
+  	font-family: 'Alien';
 }
 
-#myContact {
-/*padding: 10px;*/
+#burger {
+	margin-top: 0px;
 	margin-left:30px;
+	height: 55px;
+	width: 120px;
+	display: inline-flex;
 }
 
-.modal-body {
-	overflow-y: auto;
+#ell-container {width: 12px;}
+
+.ellipse {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #ff3f5e;
 }
 
-#myModal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+#hidden-nav {
+	margin-top: 8px;
+	margin-left: 15px;
+	width: 100px;
+	height: 38px;
+	display: none;
+}
+
+#myAbout {margin-top: 0px;}
+
+.modal-body {overflow-y: auto;}
+
+#aboutModal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgba(0,0,0,0.4); 
 	box-shadow: 0px 4px 20px;
 }
-/* Modal Content/Box */
+
+button {
+	color: white;
+	background: #426084;
+	border: none;
+	text-transform: uppercase;
+} 
+
 .modal-content {
 	background-color: #fefefe;
-	margin: 15% auto; /* 15% from the top and centered */
+	margin: 15% auto;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 90%; /* Could be more or less, depending on screen size */
-	height:flex;
+	width: 90%; 
+	height: auto;
 }
-#myModalTwo {
+#contactModal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -110,7 +155,6 @@ input[type=submit]:hover {
 	background-color: #E5BBC7;
 }
 
-/* The Close Button */
 .close {
 	color: #aaa;
 	float: right;
@@ -120,21 +164,55 @@ input[type=submit]:hover {
 
 .close:hover,
 .close:focus {
-	color: black;
+	color: #ff3f5e;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.button {
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	/*padding: 35px 32px;*/
-	padding-left: 100px;
-	text-align: center;
-	text-decoration: none;
-	display:flex;
-	font-size: 16px;
+#toggle{
+	right: 30px;
+	display: inline;
+	position: absolute;
+}
+
+#toggle input[type="checkbox"]{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -2;
+  border: none;
+  outline: none;
+}
+
+#toggle label{
+  width: 40px;
+  height: 15px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff3f5e;
+  transition: background .2s ease-in-out;
+}
+
+#toggle label:after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #3F4A63;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -1px;
+}
+
+#toggle input[type="checkbox"]:checked + label:after{
+  left : 26px;
+}
+
+#toggle input[type="checkbox"]:checked + label{
+  background: #FEC483;
 }
 
 p {
@@ -145,22 +223,9 @@ p {
 	padding-left:100px;
 	padding-right:100px;
 	color:#CCC;
-  line-height: 1.5;
+  	line-height: 1.5;
 }
 
-h1 {
-	font-size: 30px;
-	color: #ccc;
-	/*display:flex;*/
-	align-items: center;
-	justify-content: center;
-	text-transform: uppercase;
-	letter-spacing:2px;
-	width:80%;
-	padding-left:550px; 
-	margin:0;
-  font-family: 'Alien';
-}
 
 h2 {
 	font-size: 17px;
@@ -169,71 +234,42 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	letter-spacing:2px;
-	margin-left:80px;
-	margin-right:80px;
 	margin-bottom: 40px;
-
 }
 
-h3 {
-	/*position:relative;*/
-	width:50%;
-	margin: 100px;
-	font-size: 20px;
-	color: #ccc;
-	letter-spacing:2px;
-	/*margin:15%;*/
-	color:white;
+.repo {
+	position: inherit;
+	width:100%;
+	height:auto;
 }
 
-
-hr{
-	margin-left:80px;
-	margin-right:80px;
-}
-
-#box {
-	height:400px;
-	width:800px;
-	background:#C0C0C0;
-	margin:200px;
-}
-
-#main {
-	height:400px;
-	width:800px;
-	background:#6495ED;
-	margin:200px;
-}
+ul {height: auto;}
 
 li {
-  display:block !important
-  box-shadow: inset 0 0 0 3px transparent;
-  float: left;
-  display: block;
-  	border-radius: 50%;
+	background: #8EA4B9;
+	display: block
+	box-shadow: inset 0 0 0 3px transparent;
+	float: left;
+	display: block;
+	border-radius: 50%;
+	width: 150px;
+	height:150px;
+	position: relative;
+	margin: 30px;
+}
 
-  width: 150px;
-  height:150px;
-  /*border:1px solid #fff;*/
-  position: relative;
- 	margin: 30px;
-  transition: box-shadow 0.5s ease;
-  &:hover {
-    box-shadow: inset 0 0 0 3px #6495ED;
+li:hover {
+	box-shadow: inset 0 0 0 15px #ff3f5e;;
+	-ms-animation: tada 3s ease-in-out;
+	-webkit-animation: tada 3s ease-in-out;
+	-moz-animation: tada 3s ease-in-out;
+	-o-animation: tada 3s ease-in-out;
+	animation: tada 3s ease-in-out;
   }
-}
 
-.fullwidth{
-	position:relative;
-  width:100%;
-}
-.turquoise { background: white; }
+object{transform: scale(0.7);}
 
-
-/* Animation Samples - JustAddWater*/
-/* Animation Samples - JustAddWater*/
-.animated:hover{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:3s;-moz-animation-duration:3s;-ms-animation-duration:3s;-o-animation-duration:3s;animation-duration:3s;}.animated.hinge{-webkit-animation-duration:3s;-moz-animation-duration:3s;-ms-animation-duration:3s;-o-animation-duration:3s;animation-duration:3s;}@-webkit-keyframes tada {
+@-webkit-keyframes tada {
 	0% {-webkit-transform: scale(1);}	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
 	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
 	40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
@@ -264,56 +300,22 @@ li {
 	100% {transform: scale(1) rotate(0);}
 }
 
-.tada {
-	-webkit-animation-name: tada;
-	-moz-animation-name: tada;
-	-o-animation-name: tada;
-	animation-name: tada;
-}
-
-.top {
-	width:100%;
-	height:auto;
-	margin-top:300px;
-	background-color: #ccc;
-}
-
-#container {
-  left: 0px;
-  top: 0px;
-  padding-top:700px;
-  padding-bottom:;
-  z-index: -1;
+#video-container {
+	margin-top: 2em; 
 	background:white;
-	width:100%;
-	z-index:0;
-	float: left;
-	margin-top:300px;
+	height:35em;
+	width: 100%;
 }
 
-#foot {
-	z-index:0;
+.arrow-container{
+	width: 100%;
+	height: 33px;
+	margin-top: 20px;
 }
-
-#video {
-  /*padding-top:1000px;*/
-  /*margin-top:1200px;*/
-	margin-left:100px; 
- 	margin-right:100px;
- 	margin-bottom: 100px;
-  z-index: -1;
-	background:white;
-	height:500px;
-	z-index:0;
-}
-
-.arrowa {
-	position:flex;
-	margin-left:500px;
-	margin-right:200px;
-	padding-left: 200px;
-	height:auto;
-  transform: translate(10%, 10%) 
+.arrow {
+	position: absolute;
+	width: 3%;
+	left: calc(50% - 1%);
 }
 
 .pic {
@@ -321,6 +323,15 @@ li {
 	width:500px;
 	height:auto;
 }
+
+footer {
+	width: 100%;
+	height: 40px;
+	border: 1px solid red;
+	bottom: 0;
+	clear:both;
+}
+
 
 
 

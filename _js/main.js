@@ -1,10 +1,6 @@
-// Get the modal
-var modal = document.getElementById('myModal');
-var modaltwo = document.getElementById('myModalTwo');
 
-
-// Get the button that opens the modal
-//place an array of classpop
+var modal = document.getElementById('aboutModal');
+var contactModal = document.getElementById('contactModal');
 var btn = document.getElementById("myAbout");
 var btn2 = document.getElementById("myContact");
 
@@ -17,15 +13,16 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 btn2.onclick = function() {
-    modaltwo.style.display = "block";
+    contactModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
+    consol.log("i'm pressing on you damn");
 }
 span.onclick = function() {
-    modaltwo.style.display = "none";
+    contactModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -33,8 +30,8 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-        if (event.target == modaltwo) {
-        modaltwo.style.display = "none";
+        if (event.target == contactModal) {
+        contactModal.style.display = "none";
     }
 }
 
@@ -50,8 +47,23 @@ for(i in objects){
   }
 }
 
+$('#burger').hover(function() {
+  $(this).find('#hidden-nav').fadeIn();
+});
+$('#burger').mouseleave(function() {
+  $(this).find('#hidden-nav').fadeOut();
+});
 
-document.getElementById("foot").innerHTML;
+// $('#toggle').click(function() {
+//   console.log("home pressed")
+//   window.location = "index.html";
+// });
+
+
+ document.getElementById('toggle').addEventListener("change", function(){
+        console.log('toggle checked');
+        if (this.checked) window.location.href = "index.html";
+    });
 
 
 
