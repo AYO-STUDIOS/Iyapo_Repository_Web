@@ -54,13 +54,7 @@ $('#burger').mouseleave(function() {
   $(this).find('#hidden-nav').fadeOut();
 });
 
-// $('#toggle').click(function() {
-//   console.log("home pressed")
-//   window.location = "index.html";
-// });
-
-
- document.getElementById('toggle').addEventListener("change", function(){
+document.getElementById('toggle').addEventListener("change", function(){
         console.log('toggle checked');
         if (this.checked) window.location.href = "index.html";
     });
