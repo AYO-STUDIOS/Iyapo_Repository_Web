@@ -237,7 +237,7 @@ h2 {
 	margin-bottom: 40px;
 }
 
-.repo {
+#repo {
 	position: inherit;
 	width:100%;
 	height:auto;
@@ -247,8 +247,8 @@ ul {height: auto;}
 
 li {
 	background: #8EA4B9;
-	display: block
-	box-shadow: inset 0 0 0 3px transparent;
+	display: block;
+/*	box-shadow: inset 0 0 0 3px transparent;*/
 	float: left;
 	display: block;
 	border-radius: 50%;
@@ -259,7 +259,8 @@ li {
 }
 
 li:hover {
-	box-shadow: inset 0 0 0 15px #ff3f5e;;
+	box-shadow: inset 0 0 0 15px #ff3f5e;
+	
 	-ms-animation: tada 3s ease-in-out;
 	-webkit-animation: tada 3s ease-in-out;
 	-moz-animation: tada 3s ease-in-out;
@@ -327,9 +328,15 @@ object{transform: scale(0.7);}
 footer {
 	width: 100%;
 	height: 40px;
-	border: 1px solid red;
 	bottom: 0;
 	clear:both;
+}
+
+#rights {
+	color: #CCC;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 10pt;
+	text-align: center;
 }
 
 

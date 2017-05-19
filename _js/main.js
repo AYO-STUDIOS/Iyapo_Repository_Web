@@ -54,6 +54,26 @@ $('#burger').mouseleave(function() {
   $(this).find('#hidden-nav').fadeOut();
 });
 
+var countItems = document.getElementsByTagName("ul")[0].childElementCount;
+console.log('countItems: ' + countItems);
+
+
+$(document).ready(function() {
+
+    $("#repo ul li").click(function() {
+        var index = $("#repo ul li").index(this);
+        console.log('That was div index #' + index);
+    });
+   
+});
+
+
+// $('.repo ul li').click(function(){
+//     alert( $('.repo ul li').index(this) );
+//     console.log('That was div index #' + index);
+// });
+
+
 // document.getElementById('toggle').addEventListener("change", function(){
 //         console.log('toggle checked');
 //         if (this.checked) window.location = "index.html";
