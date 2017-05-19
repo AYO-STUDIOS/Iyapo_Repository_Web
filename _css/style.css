@@ -169,13 +169,13 @@ input[type=submit]:hover {
 	cursor: pointer;
 }
 
-#toggle{
+.toggle{
 	right: 30px;
 	display: inline;
 	position: absolute;
 }
 
-#toggle input[type="checkbox"]{
+.toggle input[type="checkbox"]{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -185,7 +185,7 @@ input[type=submit]:hover {
   outline: none;
 }
 
-#toggle label{
+.toggle label{
   width: 40px;
   height: 15px;
   border-radius: 50px;
@@ -196,7 +196,7 @@ input[type=submit]:hover {
   transition: background .2s ease-in-out;
 }
 
-#toggle label:after{
+.toggle label:after{
   content: '';
   width: 15px;
   height: 15px;
@@ -207,11 +207,11 @@ input[type=submit]:hover {
   left: -1px;
 }
 
-#toggle input[type="checkbox"]:checked + label:after{
+.toggle input[type="checkbox"]:checked + label:after{
   left : 26px;
 }
 
-#toggle input[type="checkbox"]:checked + label{
+.toggle input[type="checkbox"]:checked + label{
   background: #FEC483;
 }
 

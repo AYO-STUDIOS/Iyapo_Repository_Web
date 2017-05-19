@@ -12,6 +12,7 @@
 	<script language="javascript" type="text/javascript" src="_js/particles_systems.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
 	<style>
 		body {
 			background: rgb(36,43,101);
@@ -24,15 +25,17 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="getDB()">
+	<div id="DB"><p>DB Data</p></div>
 	<header class="main-header">
 	  <div class="header-container"></div>
 	  <h1>IYAPO REPOSITORY</h1>
-      <div id="toggle">
+      <div class="toggle">
         <input type="checkbox" id="checktoggle"/>
         <label for="checktoggle"></label>
       </div>
 	</header>
 	<script src="_js/main.js"></script>
+	<script src="_js/data_base.js"></script>
 </body>
 </html>

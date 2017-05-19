@@ -46,15 +46,15 @@ if(document.URL.indexOf("static.html") >= 0){
   }
 
   for(i in objects){
-  for(n in objects[i]){
-  }
+    for(n in objects[i]){
+   }
   }
 
   $('#burger').hover(function() {
-  $(this).find('#hidden-nav').fadeIn();
+    $(this).find('#hidden-nav').fadeIn();
   });
   $('#burger').mouseleave(function() {
-  $(this).find('#hidden-nav').fadeOut();
+    $(this).find('#hidden-nav').fadeOut();
   });
 
   var countItems = document.getElementsByTagName("ul")[0].childElementCount;
@@ -69,18 +69,35 @@ if(document.URL.indexOf("static.html") >= 0){
     });
 
   });
+
+  var toggle = document.getElementsByClassName('toggle');
+  console.log('whats the state of the toggle?');
+  toggle.checked = true; 
+  console.log(toggle);
+
+   $('.toggle').change(function(){
+    $('.toggle').toggle(this.unchecked); 
+    console.log('toggle checked');
+    window.location = "index.html";
+  });
 }
 
 
 // EXPLORATION
 
 if(document.URL.indexOf("index.html") >= 0){ 
+
   console.log('you are in the exploration mode');
-  $('#toggle').change(function(){
-    $('#toggle').toggle(this.checked); 
+  $('.toggle').change(function(){
+    $('.toggle').toggle(this.checked); 
     console.log('toggle checked');
     window.location = "static.html";
   });
+
+  var toggle = document.getElementsByClassName('toggle');
+  console.log('whats the state of the toggle?');
+  toggle.checked = false;
+  console.log(toggle); 
 }
 
 
