@@ -16,10 +16,11 @@
 
 html, body {
 	font-family: 'Open Sans Condensed', sans-serif;
-	background: #426084;
+	background: #242B65;
 	height: 100%;
 	width: 100%;
 	position: relative;
+	margin: 0;
 }
 
 div, footer, body {
@@ -45,6 +46,12 @@ div, footer, body {
 	width: 17%;
 	left: calc(50% - 8%);
   	font-family: 'Alien';
+}
+
+h4{
+	width: 100%;
+	text-align: center;
+	color: #242B65;
 }
 
 #burger {
@@ -77,8 +84,23 @@ div, footer, body {
 
 .modal-body {overflow-y: auto;}
 
+.six-colums{
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+}
+
+.six-colums:last-child{margin-right: 0;}
+
+.twelve-colums{
+    float: left;
+    display: block;
+    width:100%;
+}
+
 #aboutModal {
-	display: none; 
+	display: block; 
 	position: fixed; 
 	z-index: 1; 
 	left: 0;
@@ -90,9 +112,19 @@ div, footer, body {
 	box-shadow: 0px 4px 20px;
 }
 
+#artistAbout a{
+	color: #ff3f5e;
+	text-decoration: none;
+}
+
+a.portfolio{
+	position: absolute;
+	margin-top: 20px;
+}
+
 button {
 	color: white;
-	background: #426084;
+	background: #242B65;
 	border: none;
 	text-transform: uppercase;
 } 
@@ -101,7 +133,7 @@ button {
 	background-color: #fefefe;
 	margin: 15% auto;
 	padding: 20px;
-	border: 1px solid #888;
+	border: 4px solid #ff3f5e;
 	width: 90%; 
 	height: auto;
 }
@@ -268,6 +300,49 @@ li:hover {
 
 img {transform: scale(0.7);}
 
+
+
+#video-container {
+	margin-top: 2em; 
+	background:white;
+	height:35em;
+	width: 100%;
+}
+
+.arrow-container{
+	width: 100%;
+	height: 33px;
+	margin-top: 20px;
+}
+.arrow {
+	position: absolute;
+	width: 3%;
+	left: calc(50% - 1%);
+}
+
+.pic {
+	width: 100%;
+	height: auto;
+}
+
+footer {
+	width: 100%;
+	height: 40px;
+	bottom: 0;
+	clear:both;
+}
+
+#rights {
+	color: #CCC;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#DB{
+	display: none;
+}
+
 @-webkit-keyframes tada {
 	0% {-webkit-transform: scale(1);}	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
 	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
@@ -298,45 +373,6 @@ img {transform: scale(0.7);}
 	40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
 	100% {transform: scale(1) rotate(0);}
 }
-
-#video-container {
-	margin-top: 2em; 
-	background:white;
-	height:35em;
-	width: 100%;
-}
-
-.arrow-container{
-	width: 100%;
-	height: 33px;
-	margin-top: 20px;
-}
-.arrow {
-	position: absolute;
-	width: 3%;
-	left: calc(50% - 1%);
-}
-
-.pic {
-	padding-left:40px;
-	width:500px;
-	height:auto;
-}
-
-footer {
-	width: 100%;
-	height: 40px;
-	bottom: 0;
-	clear:both;
-}
-
-#rights {
-	color: #CCC;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 10pt;
-	text-align: center;
-}
-
 
 
 

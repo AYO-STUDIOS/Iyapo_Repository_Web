@@ -88,6 +88,7 @@ if(document.URL.indexOf("static.html") >= 0){
 if(document.URL.indexOf("index.html") >= 0){ 
 
   console.log('you are in the exploration mode');
+  
   $('.toggle').change(function(){
     $('.toggle').toggle(this.checked); 
     console.log('toggle checked');
@@ -98,6 +99,9 @@ if(document.URL.indexOf("index.html") >= 0){
   console.log('whats the state of the toggle?');
   toggle.checked = false;
   console.log(toggle); 
+  
 }
 
+var data = getElementById('DB');
+console.log('reading data');
 

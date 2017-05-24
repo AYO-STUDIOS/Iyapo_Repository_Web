@@ -1,38 +1,32 @@
 
-var numberOfStars = 100;
+// var numberOfStars = numberOfStars.socket();
 var maxSpeed = 1;
 var colorOfSky = "rgb(36,43,101)";
 var colorOfStars = "rgb(75,81,129)";
 var minSizeOfStars = 20;
 var maxSizeOfStars = 100; 
 var direction = -1; // "1": stars follow mouse OR "-1": stars are repelled by mouse
-
-/* setting up other variables */
 var xSpeed;
 var ySpeed;
-
-/* setting up array */
 var stars = [];
 
 function setup(){
-// executed once
-  createCanvas(windowWidth, windowHeight); // canvas setup
 
-  // create stars with random coordinates
+  createCanvas(windowWidth, windowHeight); 
+  console.log("particle system i: " + numberOfStars);
+
   for(var i = 0; i <= numberOfStars; i++){
     var x = random(width);
     var y = random(height);
     var speedFactor = random(0.2, 1); // setup a range of possible speeds
     var weight = random(minSizeOfStars, maxSizeOfStars);
-
     stars[i] = {x, y, speedFactor, weight}; // push stars to array
   }
 }
 
 function draw(){
-// executed all the time
-  background(colorOfSky); // setup background color
-  stroke(colorOfStars); // setup star color
+  background(colorOfSky);
+  stroke(colorOfStars); 
 
   for(var i = 0; i < stars.length; i++) {
     // setup colors
