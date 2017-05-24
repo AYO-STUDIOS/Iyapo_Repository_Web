@@ -20,7 +20,12 @@ html, body {
 	height: 100%;
 	width: 100%;
 	position: relative;
+<<<<<<< HEAD
 	margin: 0;
+=======
+ 	margin:0;
+  padding:0;
+>>>>>>> object
 }
 
 div, footer, body {
@@ -255,7 +260,16 @@ p {
 	padding-left:100px;
 	padding-right:100px;
 	color:#CCC;
-  	line-height: 1.5;
+	line-height: 1.5;
+}
+h1 {
+	font-size: 30px;
+	color: white;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing:2px;
+	margin-bottom: 40px;
 }
 
 
@@ -267,6 +281,16 @@ h2 {
 	justify-content: center;
 	letter-spacing:2px;
 	margin-bottom: 40px;
+}
+h3 {
+	position: center;
+	margin-bottom: 40px;
+	text-align: left;
+	font: 20px;
+	padding-left: 90px;
+	padding-right: 50px;
+	color:#FFFFFF;
+	line-height: 1.5;
 }
 
 #repo {
@@ -325,11 +349,150 @@ img {transform: scale(0.7);}
 	height: auto;
 }
 
+.wrap {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	max-width:1200px;
+  margin:auto;
+}
+.main {
+	flex: 1;
+	display:flex;
+}
+
+.sidebar {
+	background:grey;
+	flex:100px;
+	padding:10px;
+}
+.content{
+	background:black;
+	padding:10px;
+	flex:1;	
+	margin:0%;
+	width: 30%;
+	color:white;
+	padding-top: 300px;
+	font-size:18px;
+	line-height: 30px;
+}
+
+.objhead {
+	font-size: 30px;
+	float left:10px;
+	padding-bottom: 30px;
+}
+.bigobject {
+	transform: scale(40);
+}
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+#objheader{
+	width: 100%;
+	height: 500px;
+/*	background: yellow;
+*/	margin-bottom: 100px;
+	position: center;
+}
+
+.pagewrap {
+	padding: 5px;
+	padding-bottom: 30px;
+	width: 100%;
+	margin: 20px auto;
+	margin-bottom: 40px;
+}
+
+#content {
+	width: 49%;
+	float: left;
+	padding-top: 100px;
+	background-color: none;
+	color: white;
+	padding-bottom: 100px;
+	margin-top: 50px;
+
+}
+
+img {
+	display: block;
+	margin: 70px auto;
+	width: 70%;
+	height: auto;
+}
+
+.script {
+	float: left;
+	padding-left: 100px;
+	background-color: none;
+	color: white;
+	padding-bottom: 100px;
+	margin-top: 100px;
+}
+
+#middle {
+	width: 0px; /* Account for margins + border values */
+	float: left;
+	padding-top: 100px;
+	margin-top: 0px;
+	margin-left:0px;
+	margin-right: 0px;
+
+}
+
+#sidebar {
+	width: 49%;
+	padding-top: 100px;
+	float: left;
+	/*background-color: yellow;*/
+	color: white;
+	padding-bottom: 100px;
+	margin-top: 100px;
+}
+
+li.pageobject {
+	height: 500px;
+	width: 500px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
 footer {
 	width: 100%;
 	height: 40px;
+<<<<<<< HEAD
+=======
+	float:left;
+	/*border: 1px solid red;*/
+>>>>>>> object
 	bottom: 0;
 	clear:both;
+	margin: 0px;
+	background-color:#ccc;
 }
 
 #rights {
@@ -373,6 +536,9 @@ footer {
 	40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
 	100% {transform: scale(1) rotate(0);}
 }
+
+
+
 
 
 
