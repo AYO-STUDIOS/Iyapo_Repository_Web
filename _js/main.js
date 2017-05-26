@@ -5,11 +5,12 @@ if(document.URL.indexOf("static.html") >= 0){
 
   console.log('you are in the classic mode');
 
-  var modal = document.getElementById('aboutModal');
-  var contactModal = document.getElementById('contactModal');
+  var modal = document.getElementById("aboutModal");
+  var contactModal = document.getElementById("contactModal");
   var btn = document.getElementById("myAbout");
   var btn2 = document.getElementById("myContact");
-  var span = document.getElementsByClassName("close")[0];
+  var span = document.getElementsByClassName("close");
+  var popup = document.getElementsByClassName("pop-up");
 
   // When the user clicks on the button, open the modal 
   btn.onclick = function() {
@@ -28,12 +29,16 @@ if(document.URL.indexOf("static.html") >= 0){
     contactModal.style.display = "none";
   }
 
+  span.onclick = function() {
+    popup.style.display = "none";
+  }
+
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-        if (event.target == contactModal) {
+    if (event.target == contactModal) {
         contactModal.style.display = "none";
     }
   }
@@ -68,6 +73,12 @@ if(document.URL.indexOf("static.html") >= 0){
         console.log('That was div index #' + index);
     });
 
+    $("#repo ul li img").click(function() {
+        $(".pop-up").css("display", "block");
+        console.log("are you displaying");
+    });
+
+
   });
 
   var toggle = document.getElementsByClassName('toggle');
@@ -80,6 +91,8 @@ if(document.URL.indexOf("static.html") >= 0){
     console.log('toggle checked');
     window.location = "index.html";
   });
+
+
 }
 
 
