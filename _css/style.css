@@ -50,7 +50,6 @@ div, footer, body {
   	font-family: 'Alien';
 }
 
-
 #burger {
 	margin-top: 0px;
 	margin-left:30px;
@@ -97,7 +96,7 @@ div, footer, body {
 }
 
 #aboutModal {
-	display: block; 
+	display: none; 
 	position: fixed; 
 	z-index: 1; 
 	left: 0;
@@ -188,8 +187,6 @@ input[type=submit]:hover {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
-	position: absolute;
-	right: 5px;
 }
 
 .close:hover,
@@ -357,14 +354,18 @@ img {transform: scale(0.7);}
 }
 
 .pop-up {
-	height: auto;
-	width: 84%;
-	border: 1px solid red;
-	position: absolute;
-	background: violet;
-	left: calc(50% - 42%);
-/*	display: block;*/
+	position: fixed;
 	display: none;
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	box-shadow: 0px 4px 20px;
+
 }
 
 h1#artifact {
@@ -401,9 +402,6 @@ footer {
 	text-align: center;
 }
 
-#DB{
-	display: none;
-}
 
 @-webkit-keyframes tada {
 	0% {-webkit-transform: scale(1);}	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}

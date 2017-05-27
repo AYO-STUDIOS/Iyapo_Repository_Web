@@ -1,120 +1,107 @@
 
-// CLASSIC
-
-if(document.URL.indexOf("static.html") >= 0){ 
-
-  console.log('you are in the classic mode');
-
-  var modal = document.getElementById("aboutModal");
-  var contactModal = document.getElementById("contactModal");
-  var btn = document.getElementById("myAbout");
-  var btn2 = document.getElementById("myContact");
-  var span = document.getElementsByClassName("close");
-  var popup = document.getElementsByClassName("pop-up");
-
-  // When the user clicks on the button, open the modal 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-  btn2.onclick = function() {
-    contactModal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-    consol.log("i'm pressing on you damn");
-  }
-  span.onclick = function() {
-    contactModal.style.display = "none";
-  }
-
-  span.onclick = function() {
-    popup.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    if (event.target == contactModal) {
-        contactModal.style.display = "none";
-    }
-  }
-
-  var objects = [];
-
-  // creating 6 arrays in our orig. array
-  for(var i = 0; i < 6; i++){
-   objects[i] = [Math.random(), Math.random()] 
-  }
-
-  for(i in objects){
-    for(n in objects[i]){
-   }
-  }
-
-  $('#burger').hover(function() {
-    $(this).find('#hidden-nav').fadeIn();
-  });
-  $('#burger').mouseleave(function() {
-    $(this).find('#hidden-nav').fadeOut();
-  });
-
-  var countItems = document.getElementsByTagName("ul")[0].childElementCount;
-  console.log('countItems: ' + countItems);
 
 
-  $(document).ready(function() {
+var modal = document.getElementById("aboutModal");
+var contactModal = document.getElementById("contactModal");
+var btn = document.getElementById("myAbout");
+var btn2 = document.getElementById("myContact");
+var span = document.getElementsByClassName("close");
+var popup = document.getElementsByClassName("pop-up");
+var toggle = document.getElementsByClassName('toggle');
+toggle.checked = false;
 
-    $("#repo ul li").click(function() {
-        var index = $("#repo ul li").index(this);
-        console.log('That was div index #' + index);
-    });
-
-    $("#repo ul li img").click(function() {
-        $(".pop-up").css("display", "block");
-        console.log("are you displaying");
-    });
-
-
-  });
-
-  var toggle = document.getElementsByClassName('toggle');
-  console.log('whats the state of the toggle?');
-  toggle.checked = true; 
-  console.log(toggle);
-
-   $('.toggle').change(function(){
-    $('.toggle').toggle(this.unchecked); 
-    console.log('toggle checked');
-    window.location = "index.html";
-  });
+console.log('whats the state of the toggle?');
+console.log(toggle); 
 
 
-}
+ $(document).ready(function() {
 
-
-// EXPLORATION
-
-if(document.URL.indexOf("index.html") >= 0){ 
-
-  console.log('you are in the exploration mode');
-  
   $('.toggle').change(function(){
     $('.toggle').toggle(this.checked); 
     console.log('toggle checked');
     window.location = "static.html";
+    toggle.checked = true;
+      $('.toggle').toggle(this.unchecked);
   });
 
-  var toggle = document.getElementsByClassName('toggle');
-  console.log('whats the state of the toggle?');
-  toggle.checked = false;
-  console.log(toggle); 
-  
-}
+  if (document.URL.indexOf("static.html") >= 0) {
+    console.log('classic mode');
+  }
 
-var data = getElementById('DB');
-console.log('reading data');
+  var countItems = document.getElementsByTagName("ul")[0].childElementCount;
+  console.log('countItems: ' + countItems);  
+
+  $("#repo ul li").click(function() {
+      var index = $("#repo ul li").index(this);
+      console.log('That was div index #' + index);
+      $('.pop-up').fadeIn();
+  });
+
+    $('.close').click(function() {
+      $('.pop-up').fadeOut();
+      console.log('clicking close botton');
+  });
+
+  $('#burger').hover(function() {
+    $('#hidden-nav').fadeIn();
+  });
+  $('#burger').mouseleave(function() {
+    $('#hidden-nav').fadeOut();
+  });
+
+  btn.onclick = function() {modal.style.display = "block";}
+  btn2.onclick = function() {contactModal.style.display = "block";}
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+    contactModal.style.display = "none";
+    consol.log("i'm pressing on you damn");
+  }
+
+    var data = getElementById('DB');
+    console.log(data);
+    socket.emit('pos', "index");
+    console.log('loading index');
+
+  });
+
+
+
+  // var objects = [];
+
+  // // creating 6 arrays in our orig. array
+  // for(var i = 0; i < 6; i++){
+  //  objects[i] = [Math.random(), Math.random()] 
+  // }
+
+  // for(i in objects){
+  //   for(n in objects[i]){
+  //  }
+  // }
+
+  // var toggle = document.getElementsByClassName('toggle');
+  // console.log('whats the state of the toggle?');
+  // toggle.checked = true; 
+  // console.log(toggle);
+
+  //  $('.toggle').change(function(){
+  //   $('.toggle').toggle(this.unchecked); 
+  //   console.log('toggle checked');
+  //   switchIndex()
+  //   window.location = "index.html";
+  // });
+
+// }
+
+
+// EXPLORATION
+
+// if(document.URL.indexOf("/_active/index.html") >= 0){ 
+
+  // console.log('you are in the exploration mode');
+  
+
+
+
 
