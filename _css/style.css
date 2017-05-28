@@ -14,8 +14,24 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'BasisGrotesque';
+  src: url('../_fonts/BasisGrotesque/BasisGrotesque.eot?#iefix') format('embedded-opentype'),  url('BasisGrotesque.woff') format('woff'), url('BasisGrotesque.ttf')  format('truetype'), url('BasisGrotesque.svg#BasisGrotesque') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BasisGrotesque-Bold';
+  src: url('../_fonts/BasisGrotesque-Bold/BasisGrotesque-Bold.eot?#iefix') format('embedded-opentype'),  url('BasisGrotesque-Bold.woff') format('woff'), url('BasisGrotesque-Bold.ttf')  format('truetype'), url('BasisGrotesque-Bold.svg#BasisGrotesque-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 html, body {
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'BasisGrotesque', sans-serif;
 	background: #242B65;
 	height: 100%;
 	width: 100%;
@@ -245,7 +261,7 @@ input[type=submit]:hover {
 p {
 	margin-bottom: 50px;
 	text-align: left;
-	font: 20px;
+	font-size: 1em;
 	padding-left:100px;
 	padding-right:100px;
 	color:#CCC;
@@ -262,12 +278,12 @@ h1 {
 
 
 h2 {
-	font-size: 17px;
-	color: #ccc;
+	font-size: 1.2em;
+	color: #242B65;
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	letter-spacing:2px;
+	letter-spacing: 1.6px;
 	margin-bottom: 40px;
 }
 h3 {
@@ -320,21 +336,33 @@ img {transform: scale(0.7);}
 
 #video-container {
 	margin-top: 2em; 
-	background:white;
+	background: white;
 	height:35em;
 	width: 100%;
 }
 
-.arrow-container{
+.arrow-container {
 	width: 100%;
 	height: 33px;
 	margin-top: 20px;
 }
 
+
+@keyframes scrollme {
+  0% {
+    top:0;
+  }
+
+  100% {
+    top:8px;
+  }
+}
+
 .arrow {
-	position: absolute;
-	width: 3%;
+	position: relative;
+	width: 4%;
 	left: calc(50% - 1%);
+	animation: scrollme  1.3s alternate infinite; 
 }
 
 .text-box {
@@ -346,6 +374,9 @@ img {transform: scale(0.7);}
 .text-box p{
 	display: table-cell;
 	vertical-align: middle;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
 }
 
 .pic {
@@ -397,7 +428,7 @@ footer {
 
 #rights {
 	color: #CCC;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'BasisGrotesque', sans-serif;
 	font-size: 10pt;
 	text-align: center;
 }
