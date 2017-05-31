@@ -106,7 +106,7 @@ div, footer, body {
     text-align: center;
 }
 
-.four-colums img{width: 100%; height: auto;}
+.four-colums img{width: 100%; height: auto; transform: scale(0.7);}
 
 .six-colums{
     float: left;
@@ -114,6 +114,8 @@ div, footer, body {
     margin-right: 2.35765%;
     width: 48.82117%;
 }
+
+.six-colums img {transform: scale(0.7);}
 
 .six-colums:last-child{margin-right: 0;}
 
