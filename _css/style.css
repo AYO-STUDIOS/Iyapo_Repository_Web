@@ -1,4 +1,4 @@
-/*Background: #426084;*/
+/*Background: ##242B65;*/
 /*pink: #ff3f5e;*/
 /*lightblue: #8EA4B9;*/
 /*verylightblue: #C6CFDA;*/
@@ -50,6 +50,8 @@ div, footer, body {
 	margin-bottom: 30px; 
 }
 
+#DB{display: none;}
+
 .header-container {
 	height: 2em;
 	position: absolute;
@@ -58,7 +60,7 @@ div, footer, body {
 .main-header h1 {
 	position: absolute;
 	font-size: 2em;
-	color: #ff3f5e;;
+	color: #ff3f5e;
 	text-transform: lowercase;
 	letter-spacing: 2px;
 	width: 17%;
@@ -96,6 +98,16 @@ div, footer, body {
 
 .modal-body {overflow-y: auto;}
 
+.four-colums{
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 30.76157%;
+    text-align: center;
+}
+
+.four-colums img{width: 100%; height: auto;}
+
 .six-colums{
     float: left;
     display: block;
@@ -127,12 +139,19 @@ div, footer, body {
 #artistAbout a{
 	color: #ff3f5e;
 	text-decoration: none;
+	font-family: 'BasisGrotesque-Bold';
+
+}
+
+#artistAbout a:hover{
+	text-decoration: underline;
 }
 
 a.portfolio{
 	position: absolute;
 	margin-top: 20px;
 }
+
 
 button {
 	color: white;
@@ -163,9 +182,29 @@ button {
 	box-shadow: 0px 4px 20px;
 }
 
+.content {
+	margin-top: 50px;
+}
+
+.content:last-child{
+	margin-top: 130px;
+}
+
+a#sign_up {
+	text-decoration: none;
+	font-family: 'BasisGrotesque-Bold';
+	color: #ff3f5e;
+	text-align: center;
+}
+
+a#sign_up:hover{
+	text-decoration: underline;
+}
+
 input[type=text], select {
-	position:center;
-	width: 90%;
+	position: relative;
+	width: 80%;
+	left: calc(50% - 40%);
 	padding: 12px 40px;
 	margin: 10px 0;
 	display: inline-block;
@@ -174,8 +213,9 @@ input[type=text], select {
 }
 
 input[type=message] {
-	position:center;
-	width: 90%;
+	position: relative;
+	width: 80%;
+	left: calc(50% - 40%);
 	height: 150px;
 	padding: 12px 40px;
 	margin: 10px 0;
@@ -185,9 +225,10 @@ input[type=message] {
 }
 
 input[type=submit] {
-	position:center;
-	width: 50%;
-	background-color: #942F4C;
+	position: relative;
+	width: 80%;
+	left: calc(50% - 40%);
+	background-color: #ff3f5e;
 	color: white;
 	padding: 14px 40px;
 	margin: 10px 0;
@@ -196,7 +237,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	background-color: #E5BBC7;
+	background-color: #242B65;
 }
 
 .close {
@@ -264,9 +305,11 @@ p {
 	font-size: 1em;
 	padding-left:100px;
 	padding-right:100px;
-	color:#CCC;
+	color:#404040;
 	line-height: 1.5;
 }
+
+strong { color: #ff3f5e;}
 
 h1 {
 	font-size: 30px;
@@ -332,10 +375,9 @@ li:hover {
 	animation: tada 3s ease-in-out;
   }
 
-img {transform: scale(0.7);}
+li img {transform: scale(0.7);}
 
 #video-container {
-	margin-top: 2em; 
 	background: white;
 	height:35em;
 	width: 100%;
@@ -432,6 +474,8 @@ footer {
 	font-size: 10pt;
 	text-align: center;
 }
+
+ #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 
 
 @-webkit-keyframes tada {

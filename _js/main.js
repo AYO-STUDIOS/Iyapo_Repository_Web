@@ -3,8 +3,6 @@
 
 var modal = document.getElementById("aboutModal");
 var contactModal = document.getElementById("contactModal");
-var btn = document.getElementById("myAbout");
-var btn2 = document.getElementById("myContact");
 var span = document.getElementsByClassName("close");
 var popup = document.getElementsByClassName("pop-up");
 var toggle = document.getElementsByClassName('toggle');
@@ -49,8 +47,22 @@ console.log(toggle);
     $('#hidden-nav').fadeOut();
   });
 
-  btn.onclick = function() {modal.style.display = "block";}
-  btn2.onclick = function() {contactModal.style.display = "block";}
+  $("#myAbout").click(function(){
+    $('#aboutModal').fadeIn();
+  });
+
+  $("#myContact").click(function(){
+    $("#contactModal").fadeIn();
+  });
+
+  $("#about").click(function(){
+    $("#aboutModal").fadeOut();
+  });
+
+  $("#contact").click(function(){
+    $("#contactModal").fadeOut();
+  });
+
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
