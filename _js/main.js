@@ -1,10 +1,3 @@
-
-
-
-var modal = document.getElementById("aboutModal");
-var contactModal = document.getElementById("contactModal");
-var span = document.getElementsByClassName("close");
-var popup = document.getElementsByClassName("pop-up");
 var toggle = document.getElementsByClassName('toggle');
 toggle.checked = false;
 
@@ -63,56 +56,14 @@ console.log(toggle);
     $("#contactModal").fadeOut();
   });
 
+  $('.arrow-container').click(function() {
+  console.log("arrow-pressed")
+    $('html, body').animate({
+      scrollTop: $('.text-box').offset().top
+    }, 2050);
+});
+});
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-    contactModal.style.display = "none";
-    consol.log("i'm pressing on you damn");
-  }
-
-    var data = getElementById('DB');
-    console.log(data);
-    socket.emit('pos', "index");
-    console.log('loading index');
-
-  });
-
-
-
-  // var objects = [];
-
-  // // creating 6 arrays in our orig. array
-  // for(var i = 0; i < 6; i++){
-  //  objects[i] = [Math.random(), Math.random()] 
-  // }
-
-  // for(i in objects){
-  //   for(n in objects[i]){
-  //  }
-  // }
-
-  // var toggle = document.getElementsByClassName('toggle');
-  // console.log('whats the state of the toggle?');
-  // toggle.checked = true; 
-  // console.log(toggle);
-
-  //  $('.toggle').change(function(){
-  //   $('.toggle').toggle(this.unchecked); 
-  //   console.log('toggle checked');
-  //   switchIndex()
-  //   window.location = "index.html";
-  // });
-
-// }
-
-
-// EXPLORATION
-
-// if(document.URL.indexOf("/_active/index.html") >= 0){ 
-
-  // console.log('you are in the exploration mode');
-  
 
 
 

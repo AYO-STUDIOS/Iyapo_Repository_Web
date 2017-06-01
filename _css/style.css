@@ -1,4 +1,4 @@
-/*Background: ##242B65;*/
+/*Background: #242B65;*/
 /*pink: #ff3f5e;*/
 /*lightblue: #8EA4B9;*/
 /*verylightblue: #C6CFDA;*/
@@ -55,17 +55,19 @@ div, footer, body {
 .header-container {
 	height: 2em;
 	position: absolute;
+
 }
 
 .main-header h1 {
 	position: absolute;
-	font-size: 2em;
+	font-size: 2.2em;
 	color: #ff3f5e;
 	text-transform: lowercase;
 	letter-spacing: 2px;
-	width: 17%;
-	left: calc(50% - 8%);
+	width: 20%;
+	left: calc(50% - 10%);
   	font-family: 'Alien';
+  	top: -13px;
 }
 
 #burger {
@@ -115,7 +117,10 @@ div, footer, body {
     width: 48.82117%;
 }
 
-.six-colums img {transform: scale(0.7);}
+.six-colums img {
+	transform: scale(0.7);
+	border: 5px solid #ff3f5e;
+}
 
 .six-colums:last-child{margin-right: 0;}
 
@@ -186,10 +191,6 @@ button {
 
 .content {
 	margin-top: 50px;
-}
-
-.content:last-child{
-	margin-top: 130px;
 }
 
 a#sign_up {
@@ -280,6 +281,7 @@ input[type=submit]:hover {
   right: 0;
   background: #ff3f5e;
   transition: background .2s ease-in-out;
+  top: calc(50% + 20px);
 }
 
 .toggle label:after{
@@ -329,8 +331,9 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	letter-spacing: 1.6px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
+
 h3 {
 	position: center;
 	margin-bottom: 40px;
@@ -349,12 +352,17 @@ h4{
 }
 
 #repo {
-	position: inherit;
+	position: relative;
 	width:100%;
 	height:auto;
 }
 
-ul {height: auto;}
+ul {
+	height: auto;
+	position: relative;
+	width: 90%;
+	left: calc(50% - 47%);
+}
 
 li {
 	background: #8EA4B9;
@@ -379,10 +387,14 @@ li:hover {
 
 li img {transform: scale(0.7);}
 
-#video-container {
+#image-container {
 	background: white;
 	height:35em;
 	width: 100%;
+	display: table;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .arrow-container {
@@ -404,14 +416,14 @@ li img {transform: scale(0.7);}
 
 .arrow {
 	position: relative;
-	width: 4%;
+	width: 3%;
 	left: calc(50% - 1%);
 	animation: scrollme  1.3s alternate infinite; 
 }
 
 .text-box {
 	width: 100%;
-	height: 400px;
+	height: 80vh;
 	display: table;
 }
 
@@ -445,9 +457,11 @@ li img {transform: scale(0.7);}
 
 h1#artifact {
 	display: inline-block;
-	width: 210px;
+	width: 260px;
+	text-align: center;
 	position: relative;
-	left: calc(50% - 105px);
+	left: calc(50% - 130px);
+	color: #242B65;
 }
 
 .number{display: inline-block;}
@@ -478,6 +492,8 @@ footer {
 }
 
  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+
+ #object-description p{margin-top: 100px;}
 
 
 @-webkit-keyframes tada {
@@ -512,6 +528,48 @@ footer {
 }
 
 
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	.main-header h1{
+		width: 30%;
+		left: calc(50% - 15%);
+	}
+	#image-container{ height: 52em; background-position: center left;}
+	.arrow { width: 5%; left: calc(50% - 2%);}
+	#rights: {font-size: 13pt;}
+
+	button {font-size: 16px;}
+	#myAbout{margin-top: -10px;}
+
+	p {padding-left: 50px; padding-right: 50px;}
+
+	input[type=text], select { width: 90%; left: calc(50% - 45%);}
+	input[type=message]{ width: 90%; left: calc(50% - 45%);}
+	input[type=submit]{width: 90%; left: calc(50% - 45%);}
+
+	#object-description p{margin-top: 65px;}
+
+}
+
+@media screen and (max-device-width: 768px){
+	.main-header h1{ display: none;}
+
+	#image-container{ height: 31em; background-position: center left;}
+	.text-box p {font-size: 1.2em;}
+	.arrow { width: 5%; left: calc(50% - 2%);}
+	#rights: {font-size: 13pt;}
+
+	button {font-size: 16px;}
+	#myAbout{margin-top: -10px;}
+
+	p {padding-left: 50px; padding-right: 50px;}
+
+	input[type=text], select { width: 90%; left: calc(50% - 45%);}
+	input[type=message]{ width: 90%; left: calc(50% - 45%);}
+	input[type=submit]{width: 90%; left: calc(50% - 45%);}
+
+	#object-description p{margin-top: 65px;}
+
+}
 
 
 
