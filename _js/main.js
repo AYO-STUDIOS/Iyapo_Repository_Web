@@ -61,7 +61,9 @@ console.log(toggle);
     $('html, body').animate({
       scrollTop: $('.text-box').offset().top
     }, 2050);
-});
+  });
+
+
 });
 
 

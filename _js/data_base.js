@@ -21,11 +21,6 @@ socket.on('toClient', function (data) {
 		localStorage.setItem(i.toString()+"lname", data.DBarray[i].lname);
 	}
 
-	// DBarrayData=data.DBarray
-	// document.getElementById("DB").innerHTML = DBarrayData[0].artid;
-	// numberOfStars=DBarrayData.length;
-	// console.log('data array: ' + DBarrayData.length);
-
 });
 
 
@@ -38,11 +33,34 @@ function getDB(){
 
 $(document).ready(function(){
 	console.log('localStorage length: ' + (localStorage.length)/8);
-	for (var i = 0; i < localStorage.length; i++) {
-		console.log(localStorage.getItem(i.toString()+"artid"))
+	for (var i = 0; i < (localStorage.length)/8; i++) {
+		$("ul").append('<li></li>');
+		console.log(localStorage.getItem(i.toString()+"artid"));
+		$('#repoList li').attr('id', function(i) {
+   			return 'object'+(i+1);
+		});
 		$("li").append(localStorage.getItem(i.toString()+'artid'));
 	}
 	document.getElementById("DB").innerHTML = localStorage.getItem("0artid");
+
+
+// give  IDs to all li element
+	// $('#repoList li').attr('id', function(i) {
+ //   		return 'object'+(i+1);
+	// });
+
+	// var n = 12;
+	// while(n > 0){
+	// 	$("ul").append('<li>' + "atrid"  + '</li>');
+	// 	n -= 1;
+	// }
+
+	// var str = '';
+	// for (i=0;i<array.length; i++) {
+	//    str += '<li id=\'li' + i + '\'>' + array[i] + '</li>';
+	// }
+	// $('#repoList').append(str);
+
 });
 
 
