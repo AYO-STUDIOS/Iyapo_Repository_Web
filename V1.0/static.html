@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="keywords" content="art, artifact, future, afro, afrofuturism, design, artist, manuscript, futurism, asega, okunseinde">
+    <title>Objects</title>
+    <link rel="stylesheet" href="_css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+  </head>
+  <body onload="getDB()">
+    <div id="DB"><p>DB Data</p></div>
+    <header class="main-header">
+      <div id="container">
+        <div id="logo"><img src="_images/AssemblyLogo-01.png"></div>
+          <div id="burger-box">
+              <div id="burger">
+                <div class="dot" id="one"></div>
+                <div class="dot" id="two"></div>
+                <div class="dot" id="three"></div>
+                <div class="dot" id="four"></div>
+              </div>
+              <div id="hidden-nav">
+                <button id="myAbout">About</button>
+                <button id="myContact">Contact</button>
+              </div>
+              <div id="aboutModal">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <span class="close" id="about">&times;</span>
+                      <div class="twelve-colums">
+                        <h2>About</h2>
+                        <p><strong>Prophecy: Artifacts of African Futures</strong> is an “archaeological future” system that employs digital spaces and artifacts to create, affirm, and project the identity of African peoples into the future. Prophecy archives and examines technological artifacts of future African cultures with the aim of reimagining notions of race, identity &amp; culture in contemporary society as we navigate through time &amp; space. </p>
+                      </div>
+                      <div id="artistAbout">
+                        <div class="twelve-colums">
+                          <h2>Artists</h2>
+                        </div>
+                        <div class="six-colums">
+                            <img class="pic" src="_images/Salome_Asega.jpg">
+                            <h4>Salome Asega</h4>
+                            <p>Salome Asega is a Brooklyn-based artist and researcher whose practice celebrates dissensus and multivocality. Through participatory research, she works collaboratively to build interactive installations and to develop odd wearables. She is the co-host of speculative talk show <a href="http://hyperopiaradio.tumblr.com/"> Hyperopia: 20/30 Vision</a> on <a href="http://www.bel-air.org/#/"> bel-air radio </a> and the Assistant Director of POWRPLNT, a digital art collaboratory. Salome received her MFA from Parsons at The New School in Design and Technology and her BA from New York University in Social Practice.<br>
+                            <a class="portfolio" target="_blank" href="http://www.salome.zone/" >Salome's Portfolio</a>
+                            </p>
+                        </div>
+                        <div class="six-colums">
+                          <img class="pic" src="_images/Profile_Okunseinde.jpg">
+                          <h4>Ayodamola Okunseinde</h4>
+                          <p>Ayodamola Okunseinde is an artist and interactive designer living and working in New York. He studied Visual Arts and Philosophy at Rutgers the State University of New Jersey where he earned his B.A. His works range from painting and speculative design to physically interactive works and explorations of Afrofuturism. Okunseinde was the co-founder and creative director of Dissident Display Studios, an award winning multimedia studio and art gallery based in Washington DC. As a staple of the Washington DC arts community, Okunseinde made influential contributions to projects and organizations such as The Washington Projects for the Arts, Pink Line Project, and Banished Productions. As a collaborator with, amongst others, choreographer Maida Withers, Carmen Wong, and Yoko K., Okunseinde created several interactive performance based works and has performed in several countries including Mexico, Finland, and Croatia.</p>
+                        </div>
+                      </div>
+                      <div class="twelve-colums">
+                        <h2>Selected Press</h2>
+                        <div class="content">                        
+                          <div class="four-colums">
+                             <a href="https://creators.vice.com/en_us/article/afrofuturist-museum-artifacts-from-the-future" target="_blank"><img src="_images/_press/Vice_Logo.svg.png"></a>
+                          </div>
+                          <div class="four-colums">
+                             <a href="http://www.bbc.co.uk/programmes/p03w5bqg" target="_blank"><img src="_images/_press/BBC-logo.png"></a>
+                          </div>
+                          <div class="four-colums">
+                            <a href="http://www.okayafrica.com/culture-2/iyapo-repository-brooklyn-artists-archive-of-the-future/" target="_blank"><img src="_images/_press/okafrica.png"></a>
+                          </div>
+                          <div class="four-colums">
+                            <a href="http://www.bkmag.com/tag/iyapo-repository/" target="_blank"><img src="_images/_press/bkmag.png"></a>
+                          </div>
+                          <div class="four-colums">
+                            <a href="https://www.artforum.com/cart/id=64232&type=print" target="_blank"><img src="_images/_press/artforum.png"></a>
+                          </div>
+                          <div class="four-colums">
+                            <a href="http://www.digiart21.org/art/the-rift-an-afronauts-journey" target="_blank"><img src="_images/_press/21.png"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="twelve-colums">
+                        <div class="content">
+                          <h2>Newsletters Sign Up</h2>
+                          <p><a href="http://eepurl.com/cQM4JT" target="_blank" id="sign_up">Sign up</a><br> for our monthly newsletters to keep your tabs on what we're working on, and be the first one to find out about upcoming master classes and exhibitions.</p>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div> 
+              <div id="contactModal">
+                  <div class="modal-content">
+                    <span class="close" id="contact">&times;</span>
+                    <p>CONTACT</p>
+                    <div class="modal-body">
+                      <input type="text" id="fname"  placeholder="Your name">
+                      <input type="text" id="fname"  placeholder="Your email address">
+                      <input type="text" id="fname"  placeholder="Subject">
+                      <input type="message" id="fname" name="firstname" placeholder="Message">
+                      <input type="submit" value="Submit">
+                    </div>
+                  </div>  
+              </div>
+          </div> 
+        <div class="toggle">
+          <input type="checkbox" id="checktoggle"/>
+          <label for="checktoggle"></label>
+        </div>
+      </div>  
+    </header>
+    <article>
+      <div class="text-box">
+        <p><strong>Prophecy: Artifacts of African Futures</strong> is an “archaeological future” system that employs digital spaces and artifacts to create, affirm, and project the identity of African peoples into the future. Prophecy archives and examines technological artifacts of future African cultures with the aim of reimagining notions of race, identity &amp; culture in contemporary society as we navigate through time &amp; space. </p>
+      </div>    
+      <div id="repo">
+        <ul>
+          <li>
+             <h3 class="artifact_id">001</h3>
+          </li>  
+        </ul>
+      </div> 
+      <div class="pop-up">
+        <div class="modal-content">
+          <div class="modal-body"> 
+            <section id="objheader">
+              <h1 id="artifact"><div class="number">001</div></h1>
+              <span class="close">&times;</span>
+              <div class="pageobject">
+                <div class="sketchfab-embed-wrapper">
+                  <div class="sketchfab-embed-wrapper"><iframe width="100%" height="480" src="https://sketchfab.com/models/2ca30c1c4d2c444b8b4a2c5afe86cb14/embed?camera=0" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+              </div> 
+            </section>   
+            <section id="content">
+              <div class="six-colums">
+                <img class="script" src="_images/_manuscript/Artifact001.jpg">
+              </div>
+              <div class="six-colums">
+                <div id="object-description">
+                  <p>Iron, the element has been magnetically altered and has caused an apocalyptic event.The only way one can determine where the contaminated iron is, by sensing color. No longer can we “see” color(because of a former apocalyptic event)we need a device that detects/indicates color through form. Color is by form now, In future eyes can’t detect chromogenesis.This device allows a person to determine what chromogenic it(the device to acknowledge iron contamination in the environment) is. </p>
+                </div>
+              </div>
+            </section>
+          </div>
+         </div> 
+      </div>
+    </article>  
+    <footer>
+        <div id="rights"> &copy; Ayo.io Studios 2017</div>
+    </footer> 
+    <script src="_js/data_base.js"></script>
+    <script src="_js/main.js"></script>    
+  </body>
+</html>
